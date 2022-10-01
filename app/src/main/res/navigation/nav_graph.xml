@@ -10,16 +10,17 @@
         android:name="uz.gita.mynotes.fragments.HomeFragment"
         android:label="Notes"
         tools:layout="@layout/fragment_home">
+
         <action
-            android:id="@+id/action_homeFragment_to_updateNoteFragment"
-            app:destination="@id/updateNoteFragment"
+            android:id="@+id/action_homeFragment_to_newNoteFragment"
+            app:destination="@id/newNoteFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_homeFragment_to_newNoteFragment"
-            app:destination="@id/newNoteFragment"
+            android:id="@+id/action_homeFragment_to_updateNoteFragment2"
+            app:destination="@id/updateNoteFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -29,15 +30,7 @@
         android:id="@+id/newNoteFragment"
         android:name="uz.gita.mynotes.fragments.NewNoteFragment"
         android:label="New Note"
-        tools:layout="@layout/fragment_new_note">
-        <action
-            android:id="@+id/action_newNoteFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_new_note"></fragment>
     <fragment
         android:id="@+id/updateNoteFragment"
         android:name="uz.gita.mynotes.fragments.UpdateNoteFragment"
@@ -49,7 +42,9 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"/>
         <argument
             android:name="note"
             app:argType="uz.gita.mynotes.model.Note"

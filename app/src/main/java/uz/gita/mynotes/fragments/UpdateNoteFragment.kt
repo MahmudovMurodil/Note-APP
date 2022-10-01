@@ -30,8 +30,7 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentUpdateNoteBinding.inflate(inflater, container, false)
         return binding.root
@@ -58,6 +57,7 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
             } else activity?.toast("Please enter note title!")
         }
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -92,5 +92,7 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
         super.onDestroy()
         _binding = null
     }
+
+
 
 }
